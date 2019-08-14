@@ -10,7 +10,7 @@
 
 		<div class="form-group">
 			<label>Quand a lieu l'évènement ?</label>
-			<%= f.datetime_select :start_date, :order => [:day, :month, :year], start_year: Date.today.year, use_month_numbers: true, minute_step: 5  %>
+			<%= f.datetime_field :start_date, order: [:day, :month, :year], start_year: Date.today.year, use_month_numbers: true, minute_step: 5  %>
 		</div>
 		<div class="form-group">
 			<label>Durée (en minutes) ?</label>
@@ -22,11 +22,15 @@
 		</div>
 		<div class="form-group">
 			<label>Prix ?</label>
-			<%= f.number_field :location, class: 'form-control' %>
+			<%= f.number_field :price, class: 'form-control' %>
 		</div>
 		<div class="form-group">
 			<label>Description :</label>
 			<%= f.text_area :description, class: 'form-control' %>
+		</div>
+
+		<div class="form-group">
+			<button type="submit">Creer l'evènement</button>
 		</div>
 		<%end%>
 
