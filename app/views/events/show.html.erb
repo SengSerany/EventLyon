@@ -1,0 +1,6 @@
+<h1><%= @event.title %></h1>
+<p><%= @event.description %><br/>
+Evenement de: <a href="<%= user_path(@event.admin.id) %>"> <%= @event.admin.username %></a>
+</p>
+
+<%= link_to "participer", new_user_session_path, :class => "btn btn-primary" %>
